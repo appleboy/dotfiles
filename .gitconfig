@@ -1,0 +1,16 @@
+[user]
+    name = Bo-Yi Wu
+    email = appleboy.tw@gmail.com
+[color]
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    log = auto
+    ui = auto
+[alias]
+    lo = log -16 --color=always --all --graph --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset%n'
+    co = checkout
+    ci = commit -s
+    st = status
+    br = branch
