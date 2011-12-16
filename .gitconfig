@@ -25,3 +25,7 @@
     fo = fetch origin
     fu = fetch upstream
     po = push origin
+[diff]
+    external = git_diff
+[pager]
+    diff =

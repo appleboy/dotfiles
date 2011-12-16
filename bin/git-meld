@@ -1,0 +1,2 @@
+#!/bin/sh
+meld -a --diff $2 $5

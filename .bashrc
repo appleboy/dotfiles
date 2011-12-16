@@ -17,6 +17,10 @@ function git_since_last_commit {
     echo "${hours_since_last_commit}h${minutes_since_last_commit}m ";
 }
 
+function git_diff() {
+    git diff --no-ext-diff -w "$@" | vim -R -
+}
+
 
 #
 if [ -z "$WINDOW" ]; then
