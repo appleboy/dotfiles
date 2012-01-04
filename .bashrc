@@ -1,4 +1,6 @@
-# Git Autocompletion
+# source code from https://github.com/appleboy/config
+# Add Git Autocompletion
+
 [ -f ~/.git-completion.bash ] && . ~/.git-completion.bash
 
 function git_branch {
@@ -30,4 +32,4 @@ else
 fi
 bind '"\x1b\x5b\x41":history-search-backward'
 bind '"\x1b\x5b\x42":history-search-forward'
-
+# end .bashrc file 
