@@ -14,14 +14,13 @@ freebsd: git tmux
 	@echo "Install $@ version compeletely !!!"
 
 git:
-	[ ! -f "~/.git-completion.bash" ] && cp .git-completion.bash ~/
 	[ ! -f "~/.gitconfig" ] && cp .gitconfig ~/
-	@echo "copy .git-completion.bash and .gitconfig to home folder !!"
+	@echo "copy .gitconfig to home folder !!"
 
 tmux:
 	[ ! -f "~/.tmux.conf" ] && cp .tmux.conf ~/
 	@echo "copy .tmux.conf to home folder !!"
 
 clean:
-	@rm -rf ~/.git-completion.bash ~/.gitconfig
-	@echo "clear .git-completion.bash and .gitconfig"
+	@rm -rf ~/.gitconfig
+	@echo "clear .gitconfig"
