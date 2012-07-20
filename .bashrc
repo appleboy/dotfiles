@@ -1,7 +1,22 @@
 # source code from https://github.com/appleboy/config
-# Add Git Autocompletion
 
-[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash
+# short command
+alias grep='grep --color=auto'
+alias g='grep --color=auto'
+alias ls="/bin/ls -aF --color=always"
+
+# common variable
+export BLOCKSIZE="k"
+export EDITOR="vim"
+export GIT_PAGER="less"
+export LESS="-EfmrSwX"
+export LSCOLORS="gxfxcxdxbxegedabagacad"
+export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
+
+# Add Git Autocompletion
+[[ -s "/etc/bash_completion" ]] && source "/etc/bash_completion"
+[[ -s "/usr/local/etc/bash_completion" ]] && source "/usr/local/etc/bash_completion"
+[[ -s "/usr/local/share/git-core/contrib/completion/git-completion.bash" ]] && source "/usr/local/share/git-core/contrib/completion/git-completion.bash"
 
 function git_branch {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
@@ -15,7 +30,6 @@ function git_since_last_commit {
     minutes_since_last_commit=$((seconds_since_last_commit/60));
     hours_since_last_commit=$((minutes_since_last_commit/60));
     minutes_since_last_commit=$((minutes_since_last_commit%60));
-    
     echo "${hours_since_last_commit}h${minutes_since_last_commit}m ";
 }
 
@@ -32,4 +46,4 @@ else
 fi
 bind '"\x1b\x5b\x41":history-search-backward'
 bind '"\x1b\x5b\x42":history-search-forward'
-# end .bashrc file 
+# end .bashrc file
