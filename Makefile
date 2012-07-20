@@ -8,9 +8,13 @@ linux: git tmux
 ifeq ($(is_bashrc),)
 	@cat .bashrc >> ~/.bashrc;
 endif
+	[ ! -f "~/.inputrc" ] && cp .inputrc ~/
+	[ ! -f "~/.profile" ] && cp .profile ~/
 	@echo "Install $@ version compeletely !!!"
 
 freebsd: git tmux
+	[ ! -f "~/.inputrc" ] && cp .inputrc ~/
+	[ ! -f "~/.profile" ] && cp .profile ~/
 	@echo "Install $@ version compeletely !!!"
 
 git:
