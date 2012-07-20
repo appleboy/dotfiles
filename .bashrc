@@ -13,7 +13,7 @@ export LESS="-EfmrSwX"
 export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
-# Add Git Autocompletion
+# Add Autocompletion
 [[ -s "/etc/bash_completion" ]] && source "/etc/bash_completion"
 [[ -s "/usr/local/etc/bash_completion" ]] && source "/usr/local/etc/bash_completion"
 [[ -s "/usr/local/share/git-core/contrib/completion/git-completion.bash" ]] && source "/usr/local/share/git-core/contrib/completion/git-completion.bash"
