@@ -16,6 +16,7 @@ export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 # Add Autocompletion
 [[ -s "/etc/bash_completion" ]] && source "/etc/bash_completion"
 [[ -s "/usr/local/etc/bash_completion" ]] && source "/usr/local/etc/bash_completion"
+[[ -s "~/.git-completion.bash" ]] && source "~/.git-completion.bash"
 [[ -s "/usr/local/share/git-core/contrib/completion/git-completion.bash" ]] && source "/usr/local/share/git-core/contrib/completion/git-completion.bash"
 
 function git_branch {
