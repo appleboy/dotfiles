@@ -21,8 +21,22 @@
     st = status
     stat = status
 
-    br = branch
+    br = branch -v
 
     fo = fetch origin
     fu = fetch upstream
     po = push origin
+
+    unstage = reset HEAD
+    uncommit = reset --soft HEAD^
+    amend = commit --amend
+    who = shortlog -n -s --no-merges
+    g = grep -n --color -E
+    cp = cherry-pick -x
+
+    # Handy shortcuts for rebasing
+    rc = rebase --continue
+    rs = rebase --skip
+    ra = rebase --abort
+[core]
+    editor = vi
