@@ -1,3 +1,5 @@
+.PHONY: clean linux freebsd git tmux
+
 is_bashrc := $(shell grep "github.com" ~/.bashrc)
 
 all:
