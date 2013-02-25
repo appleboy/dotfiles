@@ -14,6 +14,7 @@ endif
 
 freebsd: git tmux
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
+	[ ! -f "/etc/make.conf" ] && cp $@/make.conf /etc/
 	@echo "Install $@ version compeletely !!!"
 
 git:
