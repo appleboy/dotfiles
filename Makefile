@@ -19,8 +19,7 @@ freebsd: git tmux
 	fetch -o ${HOME}/.git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
 	[ ! -f "/etc/make.conf" ] && cp $@/make.conf /etc/
-	echo "==> copy .cshrc file to home directory"
-	@cp .cshrc ${HOME}/
+	[ ! -f "${HOME}/.cshrc" ] && cp .cshrc ${HOME}/
 	@echo "Install $@ version compeletely !!!"
 
 git:
