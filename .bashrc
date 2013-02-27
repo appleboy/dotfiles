@@ -14,10 +14,10 @@ export LSCOLORS="gxfxcxdxbxegedabagacad"
 export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
 # Add Autocompletion
-[[ -s "/etc/bash_completion" ]] && source "/etc/bash_completion"
-[[ -s "/usr/local/etc/bash_completion" ]] && source "/usr/local/etc/bash_completion"
-[[ -s "~/.git-completion.bash" ]] && source "~/.git-completion.bash"
-[[ -s "/usr/local/share/git-core/contrib/completion/git-completion.bash" ]] && source "/usr/local/share/git-core/contrib/completion/git-completion.bash"
+[ -f "/etc/bash_completion" ] && source "/etc/bash_completion"
+[ -f "/usr/local/etc/bash_completion" ] && source "/usr/local/etc/bash_completion"
+[ -f "~/.git-completion.bash" ] && source "~/.git-completion.bash"
+[ -f "/usr/local/share/git-core/contrib/completion/git-completion.bash" ] && source "/usr/local/share/git-core/contrib/completion/git-completion.bash"
 
 function git_branch {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
