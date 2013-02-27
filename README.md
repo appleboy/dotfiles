@@ -17,3 +17,8 @@ Linux
 --------
 
     $ cd dotfiles && make linux
+
+Author
+-------------
+
+Bo-Yi Wu, Twitter: [@appleboy](http://twitter.com/appleboy "Twitter"), Blog: http://blog.wu-boy.com
