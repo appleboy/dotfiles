@@ -10,19 +10,20 @@ linux: git tmux
 ifeq ($(is_bashrc),)
 	@cat .bashrc >> ~/.bashrc;
 endif
+	wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ${HOME}/.git-completion.bash
 	[ ! -f "~/.inputrc" ] && cp .inputrc ~/
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
 	@echo "Install $@ version compeletely !!!"
 
 freebsd: git tmux
+	fetch -o ${HOME}/.git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
 	[ ! -f "/etc/make.conf" ] && cp $@/make.conf /etc/
 	echo "==> copy .cshrc file to home directory"
-	cp .cshrc ${HOME}/
+	@cp .cshrc ${HOME}/
 	@echo "Install $@ version compeletely !!!"
 
 git:
-	wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ${HOME}/.git-completion.bash
 	[ ! -f "~/.gitconfig" ] && cp .gitconfig ~/
 	@echo "copy .gitconfig to home folder !!"
 

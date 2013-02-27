@@ -80,3 +80,9 @@ setenv EDITOR "/usr/local/bin/vim"
 setenv LESS "-EfmrSw"
 setenv LSCOLORS "gxfxcxdxbxegedabagacad"
 setenv VISUAL $EDITOR
+
+# Add Autocompletion
+[ -f "/etc/bash_completion" ] && source "/etc/bash_completion"
+[ -f "/usr/local/etc/bash_completion" ] && source "/usr/local/etc/bash_completion"
+[ -f "~/.git-completion.bash" ] && source "~/.git-completion.bash"
+[ -f "/usr/local/share/git-core/contrib/completion/git-completion.bash" ] && source "/usr/local/share/git-core/contrib/completion/git-completion.bash"
