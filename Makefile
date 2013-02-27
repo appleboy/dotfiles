@@ -17,6 +17,8 @@ endif
 freebsd: git tmux
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
 	[ ! -f "/etc/make.conf" ] && cp $@/make.conf /etc/
+	echo "==> copy .cshrc file to home directory"
+	cp .cshrc $HOME/
 	@echo "Install $@ version compeletely !!!"
 
 git:
