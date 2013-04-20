@@ -52,6 +52,4 @@ else
     PS1='\[\e[0m\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h\[\e[0m\] [\[\e[32m\]\w\[\e[0m\]] [\[\e[36m\]\A\[\e[0m\]/ \[\e[36m\]W$WINDOW\[\e[0m\]] '
 fi
 
-bind '"\x1b\x5b\x41":history-search-backward'
-bind '"\x1b\x5b\x42":history-search-forward'
 # end .bashrc file
