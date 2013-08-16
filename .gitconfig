@@ -26,6 +26,7 @@
     fo = fetch origin
     fu = fetch upstream
     po = push origin
+    pu = pull --rebase origin master
 
     unstage = reset HEAD
     uncommit = reset --soft HEAD^
