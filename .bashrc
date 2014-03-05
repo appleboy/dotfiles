@@ -52,6 +52,7 @@ else
     PS1='\[\e[0m\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h\[\e[0m\] [\[\e[32m\]\w\[\e[0m\]] [\[\e[36m\]\A\[\e[0m\]/ \[\e[36m\]W$WINDOW\[\e[0m\]] '
 fi
 
-[ -f ".nvm/nvm.sh" ] && . ~/.nvm/nvm.sh
+[ -f "~/.nvm/nvm.sh" ] && . ~/.nvm/nvm.sh
+[ -f "~/.phpbrew/bashrc" ] && ~/.phpbrew/bashrc
 
 # end .bashrc file
