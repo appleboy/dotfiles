@@ -53,10 +53,10 @@ else
 fi
 
 # support https://github.com/creationix/nvm
-[ -f "~/.nvm/nvm.sh" ] && . ~/.nvm/nvm.sh
+[ -f "~/.nvm/nvm.sh" ] && source ~/.nvm/nvm.sh
 # support https://github.com/c9s/phpbrew
-[ -f "~/.phpbrew/bashrc" ] && . ~/.phpbrew/bashrc
+[ -f "~/.phpbrew/bashrc" ] && source ~/.phpbrew/bashrc
 # support rvm
-[ -f "/etc/profile.d/rvm.sh" ] && . /etc/profile.d/rvm.sh
+[ -f "/etc/profile.d/rvm.sh" ] && source /etc/profile.d/rvm.sh
 
 # end .bashrc file
