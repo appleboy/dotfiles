@@ -52,7 +52,11 @@ else
     PS1='\[\e[0m\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h\[\e[0m\] [\[\e[32m\]\w\[\e[0m\]] [\[\e[36m\]\A\[\e[0m\]/ \[\e[36m\]W$WINDOW\[\e[0m\]] '
 fi
 
+# support https://github.com/creationix/nvm
 [ -f "~/.nvm/nvm.sh" ] && . ~/.nvm/nvm.sh
-[ -f "~/.phpbrew/bashrc" ] && ~/.phpbrew/bashrc
+# support https://github.com/c9s/phpbrew
+[ -f "~/.phpbrew/bashrc" ] && . ~/.phpbrew/bashrc
+# support rvm
+[ -f "/etc/profile.d/rvm.sh" ] && . /etc/profile.d/rvm.sh
 
 # end .bashrc file
