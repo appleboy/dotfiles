@@ -12,6 +12,7 @@ ifeq ($(is_bashrc),)
 endif
 	wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ${HOME}/.git-completion.bash
 	[ ! -f "~/.inputrc" ] && cp .inputrc ~/
+	[ ! -f "~/.my.cnf" ] && cp .inputrc ~/
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
 	@echo "Install $@ version compeletely !!!"
 
