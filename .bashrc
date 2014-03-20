@@ -18,6 +18,7 @@ export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 [ -f "/usr/local/etc/bash_completion" ] && source "/usr/local/etc/bash_completion"
 [ -f "~/.git-completion.bash" ] && source "~/.git-completion.bash"
 [ -f "/usr/local/share/git-core/contrib/completion/git-completion.bash" ] && source "/usr/local/share/git-core/contrib/completion/git-completion.bash"
+[ -f "~/.gulp-completion.bash" ] && source "~/.gulp-completion.bash"
 
 function git_branch {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
