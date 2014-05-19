@@ -14,6 +14,7 @@ endif
 	wget https://raw.github.com/gulpjs/gulp/master/completion/bash -o ${HOME}/.gulp-completion.bash
 	[ ! -f "~/.inputrc" ] && cp .inputrc ~/
 	[ ! -f "~/.my.cnf" ] && cp .inputrc ~/
+	[ ! -f "~/z.sh" ] && cp z.sh ~/
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
 	@echo "Install $@ version compeletely !!!"
 
@@ -21,6 +22,7 @@ freebsd: git tmux
 	fetch -o ${HOME}/.git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
 	fetch -o ${HOME}/.gulp-completion.bash https://raw.github.com/gulpjs/gulp/master/completion/bash
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
+	[ ! -f "~/z.sh" ] && cp $@/z.sh ~/
 	[ ! -f "/etc/make.conf" ] && cp $@/make.conf /etc/
 	[ ! -f "${HOME}/.cshrc" ] && cp .cshrc ${HOME}/
 	@echo "Install $@ version compeletely !!!"

@@ -61,3 +61,6 @@ fi
 [ -f "/etc/profile.d/rvm.sh" ] && source /etc/profile.d/rvm.sh
 
 # end .bashrc file
+
+# init z! (https://github.com/rupa/z)
+. ~/z.sh
