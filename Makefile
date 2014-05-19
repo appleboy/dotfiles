@@ -10,17 +10,17 @@ linux: git tmux
 ifeq ($(is_bashrc),)
 	@cat .bashrc >> ~/.bashrc;
 endif
-	wget https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ${HOME}/.git-completion.bash
-	wget https://raw.github.com/gulpjs/gulp/master/completion/bash -o ${HOME}/.gulp-completion.bash
+	wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ${HOME}/.git-completion.bash
+	wget https://raw.githubusercontent.com/gulpjs/gulp/master/completion/bash -O ${HOME}/.gulp-completion.bash
 	[ ! -f "~/.inputrc" ] && cp .inputrc ~/
-	[ ! -f "~/.my.cnf" ] && cp .inputrc ~/
+	[ ! -f "~/.my.cnf" ] && cp .my.cnf ~/
 	[ ! -f "~/z.sh" ] && cp z.sh ~/
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
 	@echo "Install $@ version compeletely !!!"
 
 freebsd: git tmux
-	fetch -o ${HOME}/.git-completion.bash https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-	fetch -o ${HOME}/.gulp-completion.bash https://raw.github.com/gulpjs/gulp/master/completion/bash
+	fetch -o ${HOME}/.git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+	fetch -o ${HOME}/.gulp-completion.bash https://raw.githubusercontent.com/gulpjs/gulp/master/completion/bash
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
 	[ ! -f "~/z.sh" ] && cp $@/z.sh ~/
 	[ ! -f "/etc/make.conf" ] && cp $@/make.conf /etc/
