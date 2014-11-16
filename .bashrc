@@ -60,7 +60,10 @@ fi
 # support rvm
 [ -f "/etc/profile.d/rvm.sh" ] && source /etc/profile.d/rvm.sh
 
-# end .bashrc file
-
 # init z! (https://github.com/rupa/z)
 . ~/z.sh
+
+# support git semantic commits command.
+export PATH=$PATH:$HOME/.git-semantic-commits:$PATH
+
+# end .bashrc file

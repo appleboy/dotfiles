@@ -35,6 +35,7 @@ freebsd: git tmux
 git:
 	#[ -f "${HOME}/.gitconfig" ] && mv "${HOME}/.gitconfig" "${HOME}/.gitconfig.${filetime}"
 	[ ! -f "~/.gitconfig" ] && cp .gitconfig ~/
+	[ ! -d "~/.git-semantic-commits" ] && cp -r .git-semantic-commits ~/
 	@echo "copy .gitconfig to home folder !!"
 
 tmux:
