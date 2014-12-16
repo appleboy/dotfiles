@@ -60,10 +60,10 @@ if [ -f "${HOME}/.nvm/nvm.sh" ]; then
     nvm use 0.10.33
 fi
 
-# support https://github.com/c9s/phpbrew
-[ -f "~/.phpbrew/bashrc" ] && source ~/.phpbrew/bashrc
+# support https://github.com/phpbrew/phpbrew
+[ -f "~/.phpbrew/bashrc" ] && . ~/.phpbrew/bashrc
 # support rvm
-[ -f "/etc/profile.d/rvm.sh" ] && source /etc/profile.d/rvm.sh
+[ -f "/etc/profile.d/rvm.sh" ] && . /etc/profile.d/rvm.sh
 
 # init z! (https://github.com/rupa/z)
 . ~/z.sh
