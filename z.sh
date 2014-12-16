@@ -13,6 +13,7 @@
 #         set $_Z_NO_RESOLVE_SYMLINKS to prevent symlink resolution.
 #         set $_Z_NO_PROMPT_COMMAND if you're handling PROMPT_COMMAND yourself.
 #         set $_Z_EXCLUDE_DIRS to an array of directories to exclude.
+#         set $_Z_OWNER to your username if you want use z while sudo with $HOME kept
 #
 # USE:
 #     * z foo     # cd to most frecent dir matching foo
@@ -30,8 +31,8 @@ _z() {
 
     local datafile="${_Z_DATA:-$HOME/.z}"
 
-    # bail if we don't own ~/.z (we're another user but our ENV is still set)
-    [ -f "$datafile" -a ! -O "$datafile" ] && return
+    # bail if we don't own ~/.z and $_Z_OWNER not set
+    [ -z "$_Z_OWNER" -a -f "$datafile" -a ! -O "$datafile" ] && return
 
     # add entries
     if [ "$1" = "--add" ]; then
@@ -68,7 +69,7 @@ _z() {
                 count += $2
             }
             END {
-                if( count > 6000 ) {
+                if( count > 9000 ) {
                     # aging
                     for( x in rank ) print x "|" 0.99*rank[x] "|" time[x]
                 } else for( x in rank ) print x "|" rank[x] "|" time[x]
@@ -78,25 +79,24 @@ _z() {
         if [ $? -ne 0 -a -f "$datafile" ]; then
             env rm -f "$tempfile"
         else
+            [ "$_Z_OWNER" ] && chown $_Z_OWNER:$(id -ng $_Z_OWNER) "$tempfile"
             env mv -f "$tempfile" "$datafile" || env rm -f "$tempfile"
         fi
 
     # tab completion
-    elif [ "$1" = "--complete" ]; then
+    elif [ "$1" = "--complete" -a -s "$datafile" ]; then
         while read line; do
             [ -d "${line%%\|*}" ] && echo $line
         done < "$datafile" | awk -v q="$2" -F"|" '
             BEGIN {
                 if( q == tolower(q) ) imatch = 1
-                split(substr(q, 3), fnd, " ")
+                q = substr(q, 3)
+                gsub(" ", ".*", q)
             }
             {
                 if( imatch ) {
-                    for( x in fnd ) tolower($1) !~ tolower(fnd[x]) && $1 = ""
-                } else {
-                    for( x in fnd ) $1 !~ fnd[x] && $1 = ""
-                }
-                if( $1 ) print $1
+                    if( tolower($1) ~ tolower(q) ) print $1
+                } else if( $1 ~ q ) print $1
             }
         ' 2>/dev/null
 
@@ -167,18 +167,19 @@ _z() {
                 for( x in matches ) if( matches[x] && x !~ clean_short ) return
                 return short
             }
-            BEGIN { split(q, words, " "); hi_rank = ihi_rank = -9999999999 }
+            BEGIN {
+                gsub(" ", ".*", q)
+                hi_rank = ihi_rank = -9999999999
+            }
             {
                 if( typ == "rank" ) {
                     rank = $2
                 } else if( typ == "recent" ) {
                     rank = $3 - t
                 } else rank = frecent($2, $3)
-                matches[$1] = imatches[$1] = rank
-                for( x in words ) {
-                    if( $1 !~ words[x] ) delete matches[$1]
-                    if( tolower($1) !~ tolower(words[x]) ) delete imatches[$1]
-                }
+                if( $1 ~ q ) {
+                    matches[$1] = rank
+                } else if( tolower($1) ~ tolower(q) ) imatches[$1] = rank
                 if( matches[$1] && matches[$1] > hi_rank ) {
                     best_match = $1
                     hi_rank = matches[$1]
@@ -236,7 +237,7 @@ elif complete >/dev/null 2>&1; then
     [ "$_Z_NO_PROMPT_COMMAND" ] || {
         # populate directory list. avoid clobbering other PROMPT_COMMANDs.
         grep "_z --add" <<< "$PROMPT_COMMAND" >/dev/null || {
-            PROMPT_COMMAND="$PROMPT_COMMAND"$'\n''_z --add "$(pwd '$_Z_RESOLVE_SYMLINKS' 2>/dev/null)" 2>/dev/null;'
+            PROMPT_COMMAND="$PROMPT_COMMAND"$'\n''_z --add "$(command pwd '$_Z_RESOLVE_SYMLINKS' 2>/dev/null)" 2>/dev/null;'
         }
     }
 fi
