@@ -54,7 +54,12 @@ else
 fi
 
 # support https://github.com/creationix/nvm
-[ -f "~/.nvm/nvm.sh" ] && source ~/.nvm/nvm.sh
+if [ -f "${HOME}/.nvm/nvm.sh" ]; then
+    export NVM_DIR=$HOME/.nvm
+    . ~/.nvm/nvm.sh
+    nvm use 0.10.33
+fi
+
 # support https://github.com/c9s/phpbrew
 [ -f "~/.phpbrew/bashrc" ] && source ~/.phpbrew/bashrc
 # support rvm
