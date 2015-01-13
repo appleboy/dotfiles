@@ -69,10 +69,12 @@ fi
 . ~/z.sh
 
 # support git semantic commits command.
-export PATH=$PATH:$HOME/.git-semantic-commits
+if [ -d "${HOME}/.git-semantic-commits" ]; then
+    export PATH=$PATH:${HOME}/.git-semantic-commits
+fi
 
 # support composer command
-if [ -d "${HOME}/.composer/vendor/bin"]; then
+if [ -d "${HOME}/.composer/vendor/bin" ]; then
     export PATH=$PATH:${HOME}/.composer/vendor/bin
 fi
 
