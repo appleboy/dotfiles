@@ -12,7 +12,6 @@ ifeq ($(is_bashrc),)
 	@cat .bashrc >> ~/.bashrc;
 endif
 	wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ${HOME}/.git-completion.bash
-	wget https://raw.githubusercontent.com/gulpjs/gulp/master/completion/bash -O ${HOME}/.gulp-completion.bash
 	#[ -f "${HOME}/.inputrc" ] && mv "${HOME}/.inputrc" "${HOME}/.inputrc.${filetime}"
 	#[ -f "${HOME}/.my.cnf" ] && mv "${HOME}/.my.cnf" "${HOME}/.my.cnf.${filetime}"
 	#[ -f "${HOME}/z.sh" ] && mv "${HOME}/z.sh" "${HOME}/z.sh.${filetime}"
@@ -25,7 +24,6 @@ endif
 
 freebsd: git tmux
 	fetch -o ${HOME}/.git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
-	fetch -o ${HOME}/.gulp-completion.bash https://raw.githubusercontent.com/gulpjs/gulp/master/completion/bash
 	[ ! -f "~/.profile" ] && cp $@/.profile ~/
 	[ ! -f "~/z.sh" ] && cp $@/z.sh ~/
 	[ ! -f "/etc/make.conf" ] && cp $@/make.conf /etc/
