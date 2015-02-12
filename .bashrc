@@ -57,7 +57,7 @@ fi
 if [ -f "${HOME}/.nvm/nvm.sh" ]; then
     export NVM_DIR=$HOME/.nvm
     . ~/.nvm/nvm.sh
-    nvm use 0.10.33
+    nvm use stable
 fi
 
 # support https://github.com/phpbrew/phpbrew
