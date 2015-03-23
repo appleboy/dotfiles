@@ -5,12 +5,15 @@ alias grep='grep --color=auto'
 alias g='grep --color=auto'
 alias ls="/bin/ls -aF --color=always"
 
+# set for mac
+export CLICOLOR=1
+
 # common variable
 export BLOCKSIZE="k"
 export EDITOR="vim"
 export GIT_PAGER="less"
 export LESS="-EfmrSwX"
-export LSCOLORS="gxfxcxdxbxegedabagacad"
+export LSCOLORS="dxfxcxdxbxegedabagacad"
 export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
 # Add Autocompletion
