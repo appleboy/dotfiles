@@ -1,10 +1,5 @@
 # source code from https://github.com/appleboy/config
 
-# short command
-alias grep='grep --color=auto'
-alias g='grep --color=auto'
-alias ls="/bin/ls -aF --color=always"
-
 # set for mac
 export CLICOLOR=1
 
