@@ -14,9 +14,8 @@ export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 # Add Autocompletion
 [ -f "/etc/bash_completion" ] && source "/etc/bash_completion"
 [ -f "/usr/local/etc/bash_completion" ] && source "/usr/local/etc/bash_completion"
-[ -f "~/.git-completion.bash" ] && source "~/.git-completion.bash"
+[ -f "${HOME}/.git-completion.bash" ] && source "${HOME}/.git-completion.bash"
 [ -f "/usr/local/share/git-core/contrib/completion/git-completion.bash" ] && source "/usr/local/share/git-core/contrib/completion/git-completion.bash"
-[ -f "~/.gulp-completion.bash" ] && source "~/.gulp-completion.bash"
 
 function git_branch {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
@@ -54,17 +53,17 @@ fi
 # support https://github.com/creationix/nvm
 if [ -f "${HOME}/.nvm/nvm.sh" ]; then
     export NVM_DIR=$HOME/.nvm
-    . ~/.nvm/nvm.sh
+    source ${HOME}/.nvm/nvm.sh
     nvm use stable
 fi
 
 # support https://github.com/phpbrew/phpbrew
-[ -f "~/.phpbrew/bashrc" ] && . ~/.phpbrew/bashrc
+[ -f "${HOME}/.phpbrew/bashrc" ] && source ${HOME}/.phpbrew/bashrc
 # support rvm
-[ -f "/etc/profile.d/rvm.sh" ] && . /etc/profile.d/rvm.sh
+[ -f "/etc/profile.d/rvm.sh" ] && source /etc/profile.d/rvm.sh
 
 # init z! (https://github.com/rupa/z)
-. ~/z.sh
+source ${HOME}/z.sh
 
 # support git semantic commits command.
 if [ -d "${HOME}/.git-semantic-commits" ]; then
@@ -82,5 +81,7 @@ fi
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
+
+unset file;
 
 # end .bashrc file
