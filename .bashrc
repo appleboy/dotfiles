@@ -11,6 +11,8 @@ export LESS="-EfmrSwX"
 export LSCOLORS="dxfxcxdxbxegedabagacad"
 export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
+HISTFILESIZE=100000
+
 # Add Autocompletion
 [ -f "/etc/bash_completion" ] && source "/etc/bash_completion"
 [ -f "/usr/local/etc/bash_completion" ] && source "/usr/local/etc/bash_completion"
