@@ -45,13 +45,6 @@ else
     alias ls="/bin/ls -aF"
 fi
 
-# ps1
-if [ -z "$WINDOW" ]; then
-    PS1='\[\e[0m\e[33m\]\u\[\e[0m\]@\[\e[36m\]\h\[\e[0m\] [\[\e[33m\]\w\[\e[0m\]] [\[\e[1;36m\]\t\[\e[0m\]] `git_branch`\[\033[0;33m\]`git_since_last_commit`\[\033[0m\]\n$ '
-else
-    PS1='\[\e[0m\e[32m\]\u\[\e[0m\]@\[\e[36m\]\h\[\e[0m\] [\[\e[32m\]\w\[\e[0m\]] [\[\e[36m\]\A\[\e[0m\]/ \[\e[36m\]W$WINDOW\[\e[0m\]] '
-fi
-
 # support https://github.com/creationix/nvm
 if [ -f "${HOME}/.nvm/nvm.sh" ]; then
     export NVM_DIR=$HOME/.nvm
