@@ -11,7 +11,14 @@ export LESS="-EfmrSwX"
 export LSCOLORS="dxfxcxdxbxegedabagacad"
 export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
-HISTFILESIZE=100000
+# ref: http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # Add Autocompletion
 [ -f "/etc/bash_completion" ] && source "/etc/bash_completion"
