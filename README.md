@@ -1,5 +1,4 @@
-dotfiles
-========
+# dotfiles
 
 Linux or FreeBSD user config file
 
@@ -7,22 +6,13 @@ Screenshot
 
 <img src="https://raw.github.com/appleboy/dotfiles/master/screenshot.png" alt="screenshot" />
 
-Installation
-========
+## Installation
 
-    $ git clone https://github.com/appleboy/dotfiles.git
+```
+$ git clone https://github.com/appleboy/dotfiles.git
+$ cd dotfiles && source bootstrap.sh
+```
 
-FreeBSD
---------
-
-    $ cd dotfiles && make freebsd
-
-Linux
---------
-
-    $ cd dotfiles && make linux
-
-Author
--------------
+# Author
 
 Bo-Yi Wu, Twitter: [@appleboy](http://twitter.com/appleboy "Twitter"), Blog: http://blog.wu-boy.com
