@@ -60,8 +60,8 @@ fi
 # support https://github.com/creationix/nvm
 if [ -f "${HOME}/.nvm/nvm.sh" ]; then
     export NVM_DIR=$HOME/.nvm
-    source ${HOME}/.nvm/nvm.sh
-    nvm use stable
+    source ${HOME}/.nvm/nvm.sh > /dev/null 2>&1
+    nvm use stable > /dev/null 2>&1
 fi
 
 # support https://github.com/phpbrew/phpbrew
@@ -86,7 +86,7 @@ fi
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-    [ -r "$file" ] && [ -f "$file" ] && source "$file";
+    [ -r "$file" ] && [ -f "$file" ] && source "$file" > /dev/null 2>&1;
 done;
 
 unset file;
