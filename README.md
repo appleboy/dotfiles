@@ -2,9 +2,13 @@
 
 Linux or FreeBSD user config file
 
-Screenshot
+Screenshot for bash
 
-<img src="https://raw.github.com/appleboy/dotfiles/master/screenshot.png" alt="screenshot" />
+![bash screenshot](screenshot/screenshot.png)
+
+Screenshot for tmux
+
+![bash screenshot](screenshot/tmux.png)
 
 ## Installation
 
