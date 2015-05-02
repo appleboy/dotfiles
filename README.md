@@ -4,7 +4,7 @@ Linux or FreeBSD user config file
 
 Screenshot for bash
 
-![bash screenshot](screenshot/screenshot.png)
+![bash screenshot](screenshot/bash.png)
 
 Screenshot for tmux
 
