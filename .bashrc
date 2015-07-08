@@ -66,8 +66,6 @@ fi
 
 # support https://github.com/phpbrew/phpbrew
 [ -f "${HOME}/.phpbrew/bashrc" ] && source ${HOME}/.phpbrew/bashrc
-# support rvm
-[ -f "/etc/profile.d/rvm.sh" ] && source /etc/profile.d/rvm.sh
 
 # init z! (https://github.com/rupa/z)
 source ${HOME}/z.sh
@@ -90,5 +88,7 @@ for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
 done;
 
 unset file;
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # end .bashrc file
