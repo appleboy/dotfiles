@@ -43,7 +43,7 @@
     rs = rebase --skip
     ra = rebase --abort
 [core]
-    editor = vi
+    editor = vim
 [color]
   # Use colors in Git commands that are capable of colored output when outputting to the terminal
   ui = auto
