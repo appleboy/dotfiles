@@ -1,6 +1,8 @@
 [user]
     name = Bo-Yi Wu
     email = appleboy.tw@gmail.com
+[push]
+    default = simple
 [color]
     ui = true
     diff = auto
