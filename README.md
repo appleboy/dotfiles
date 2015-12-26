@@ -23,6 +23,20 @@ Install [spf13-vim](https://github.com/spf13/spf13-vim)
 $ sh <(curl https://j.mp/spf13-vim3 -L)
 ```
 
+## Demo
+
+Run demo using docker.
+
+```
+$ docker build -t="demo" ./demo/
+```
+
+Login to docker terminal
+
+```
+$ docker run -t -i demo /bin/bash
+```
+
 # Author
 
 Bo-Yi Wu, Twitter: [@appleboy](http://twitter.com/appleboy "Twitter"), Blog: http://blog.wu-boy.com
