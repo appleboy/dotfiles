@@ -28,7 +28,7 @@ $ sh <(curl https://j.mp/spf13-vim3 -L)
 Run demo using docker.
 
 ```
-$ docker build -t="demo" ./demo/
+$ docker build -t demo ./Docker/
 ```
 
 Login to docker terminal
