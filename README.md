@@ -25,16 +25,16 @@ $ sh <(curl https://j.mp/spf13-vim3 -L)
 
 ## Demo
 
-Run demo using docker.
+Download demo terminal from docker.
 
 ```
-$ docker build -t demo ./Docker/
+$ docker pull appleboy/docker-terminal
 ```
 
 Login to docker terminal
 
 ```
-$ docker run -t -i demo /bin/bash
+$ docker run -ti appleboy/docker-terminal
 ```
 
 # Author
