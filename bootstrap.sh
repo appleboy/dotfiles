@@ -24,8 +24,10 @@ fi;
 
 unset doIt;
 
+[ -d "~/bin" ] || mkdir ~/bin
+
 # download z.sh (https://github.com/rupa/z)
-wget https://raw.githubusercontent.com/rupa/z/master/z.sh -O ~/z.sh
+curl -o ~/z.sh "https://raw.githubusercontent.com/rupa/z/master/z.sh"
 # download git-blame-someone-else (https://github.com/jayphelps/git-blame-someone-else)
-wget https://raw.githubusercontent.com/jayphelps/git-blame-someone-else/master/git-blame-someone-else -O ~/bin/git-blame-someone-else
+curl -o ~/bin/git-blame-someone-else "https://raw.githubusercontent.com/jayphelps/git-blame-someone-else/master/git-blame-someone-else"
 chmod 755 ~/bin/git-blame-someone-else
