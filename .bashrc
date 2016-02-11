@@ -68,7 +68,7 @@ fi
 [ -f "${HOME}/.phpbrew/bashrc" ] && source ${HOME}/.phpbrew/bashrc
 
 # init z! (https://github.com/rupa/z)
-source ${HOME}/z.sh
+[ -f "${HOME}/z.sh" ] && source ${HOME}/z.sh
 
 # support git semantic commits command.
 if [ -d "${HOME}/.git-semantic-commits" ]; then

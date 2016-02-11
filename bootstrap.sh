@@ -24,7 +24,7 @@ fi;
 
 unset doIt;
 
-[ -d "~/bin" ] || mkdir ~/bin
+[ -d "${HOME}/bin" ] || mkdir ~/bin
 
 # download z.sh (https://github.com/rupa/z)
 curl -o ~/z.sh "https://raw.githubusercontent.com/rupa/z/master/z.sh"
