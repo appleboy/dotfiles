@@ -1,49 +1,52 @@
 [user]
-    name = Bo-Yi Wu
-    email = appleboy.tw@gmail.com
+  name = Bo-Yi Wu
+  email = appleboy.tw@gmail.com
 [push]
-    default = simple
+  default = simple
 [color]
-    ui = true
-    diff = auto
-    status = auto
-    branch = auto
-    log = auto
-    ui = auto
-[branch]  
+  ui = true
+  diff = auto
+  status = auto
+  branch = auto
+  log = auto
+  ui = auto
+[branch]
     autosetuprebase = always
 [alias]
-    gl = log -16 --color=always --all --graph --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset%n'
-    gr = log --color=always --all --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset'
-    gs = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+  gl = log -16 --color=always --all --graph --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset%n'
+  gr = log --color=always --all --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset'
+  gs = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
 
-    merge = merge --no-ff
-    up = merge --ff-only
+  merge = merge --no-ff
+  up = merge --ff-only
 
-    co = checkout
-    ci = commit -s
+  co = checkout
+  ci = commit -s
 
-    st = status
-    stat = status
+  st = status
+  stat = status
 
-    br = branch -v
+  br = branch -v
 
-    fo = fetch origin
-    fu = fetch upstream
-    po = push origin
-    pu = pull --rebase origin master
+  fo = fetch origin
+  fu = fetch upstream
+  po = push origin
+  pu = pull --rebase origin master
 
-    unstage = reset HEAD
-    uncommit = reset --soft HEAD^
-    amend = commit --amend
-    who = shortlog -n -s --no-merges
-    g = grep -n --color -E
-    cp = cherry-pick -x
+  unstage = reset HEAD
+  uncommit = reset --soft HEAD^
+  amend = commit --amend
+  who = shortlog -n -s --no-merges
+  g = grep -n --color -E
+  cp = cherry-pick -x
 
-    # Handy shortcuts for rebasing
-    rc = rebase --continue
-    rs = rebase --skip
-    ra = rebase --abort
+  # Handy shortcuts for rebasing
+  rc = rebase --continue
+  rs = rebase --skip
+  ra = rebase --abort
+
+  # diff-so-fancy
+  df = "!git diff --color $@ | diff-so-fancy"
 [core]
     editor = vim
 [color]

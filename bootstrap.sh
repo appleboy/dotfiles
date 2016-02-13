@@ -28,6 +28,13 @@ unset doIt;
 
 # download z.sh (https://github.com/rupa/z)
 curl -o ~/z.sh "https://raw.githubusercontent.com/rupa/z/master/z.sh"
+
 # download git-blame-someone-else (https://github.com/jayphelps/git-blame-someone-else)
 curl -o ~/bin/git-blame-someone-else "https://raw.githubusercontent.com/jayphelps/git-blame-someone-else/master/git-blame-someone-else"
 chmod 755 ~/bin/git-blame-someone-else
+
+# download diff-so-fancy (https://github.com/stevemao/diff-so-fancy)
+curl -o ~/bin/diff-highlight "https://raw.githubusercontent.com/git/git/master/contrib/diff-highlight/diff-highlight"
+curl -o ~/bin/diff-so-fancy "https://raw.githubusercontent.com/stevemao/diff-so-fancy/master/diff-so-fancy"
+chmod 755 ~/bin/diff-highlight
+chmod 755 ~/bin/diff-so-fancy
