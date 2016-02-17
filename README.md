@@ -1,5 +1,7 @@
 # dotfiles
 
+<a href='http://imagelayers.iron.io/?images=appleboy/docker-terminal:latest' title='Get your own badge on imagelayers.iron.io'><img src='http://badge-imagelayers.iron.io/appleboy/docker-terminal:latest.svg'></a>
+
 Linux or FreeBSD user config file
 
 Screenshot for bash
