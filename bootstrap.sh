@@ -34,8 +34,11 @@ curl -o ~/bin/git-blame-someone-else "https://raw.githubusercontent.com/jayphelp
 chmod 755 ~/bin/git-blame-someone-else
 
 # download diff-so-fancy (https://github.com/stevemao/diff-so-fancy)
+[ -d "~/bin/lib" ] || mkdir -p ~/bin/lib
+curl -o ~/bin/lib/diff-so-fancy.pl "https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/lib/diff-so-fancy.pl"
 curl -o ~/bin/diff-highlight "https://raw.githubusercontent.com/git/git/master/contrib/diff-highlight/diff-highlight"
 curl -o ~/bin/diff-so-fancy "https://raw.githubusercontent.com/stevemao/diff-so-fancy/master/diff-so-fancy"
+chmod 755 ~/bin/lib/diff-so-fancy.pl
 chmod 755 ~/bin/diff-highlight
 chmod 755 ~/bin/diff-so-fancy
 
