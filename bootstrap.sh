@@ -38,3 +38,7 @@ curl -o ~/bin/diff-highlight "https://raw.githubusercontent.com/git/git/master/c
 curl -o ~/bin/diff-so-fancy "https://raw.githubusercontent.com/stevemao/diff-so-fancy/master/diff-so-fancy"
 chmod 755 ~/bin/diff-highlight
 chmod 755 ~/bin/diff-so-fancy
+
+# download git-mv-with-history
+curl -o ~/bin/git-mv-with-history "https://gist.githubusercontent.com/emiller/6769886/raw/git-mv-with-history"
+chmod 755 ~/bin/git-mv-with-history
