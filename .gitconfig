@@ -17,6 +17,7 @@
   gr = log --color=always --all --topo-order --pretty='format: %Cgreen%h%Creset %s%Cred%d%Creset'
   gs = log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
   gw = log --no-merges --raw --since='4 weeks ago'
+  fl = log --follow -p --
 
   merge = merge --no-ff
   up = merge --ff-only
