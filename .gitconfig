@@ -48,7 +48,7 @@
   ra = rebase --abort
 
   # diff-so-fancy
-  df = "!f() { [ \"$GIT_PREFIX\" != \"\"  ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX;  }; f"
+  df = "!f() { [ \"$GIT_PREFIX\" != \"\" ] && cd "$GIT_PREFIX"; git diff --color $@ | diff-so-fancy | less --tabs=4 -RFX; }; f"
 
 [core]
     editor = vim
