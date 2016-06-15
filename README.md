@@ -12,7 +12,7 @@ Screenshot for tmux
 
 ![bash screenshot](screenshot/tmux.png)
 
-## Installation
+## Usage
 
 ```
 $ git clone https://github.com/appleboy/dotfiles.git && cd dotfiles && source bootstrap.sh

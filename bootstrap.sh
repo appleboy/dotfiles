@@ -6,8 +6,9 @@ git pull origin master;
 
 function doIt() {
   rsync --exclude ".git/" --exclude "bootstrap.sh" \
-    --exclude "README.md" --exclude "screenshot/" \
-    --exclude "freebsd/" --exclude "alpine/" \
+    --exclude "Makefile" --exclude "screenshot/" \
+    --exclude "README.md" --exclude "alpine/" \
+    --exclude "freebsd/" \
     -avh --no-perms . ~;
   source ~/.bashrc;
 }
