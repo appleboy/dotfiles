@@ -18,6 +18,7 @@
   gs = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   gw = log --no-merges --raw --since='4 weeks ago'
   fl = log --follow -p --
+  rl = shortlog --no-merges --format='%Cgreen%h%Creset %s'
 
   merge = merge --no-ff
   up = merge --ff-only
