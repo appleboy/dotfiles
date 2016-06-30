@@ -16,6 +16,9 @@ export LESS="-EfmrSwX"
 export LSCOLORS="dxfxcxdxbxegedabagacad"
 export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
+# Add a timestamp to your bash history
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
 # ref: http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
