@@ -48,3 +48,8 @@ chmod 755 ~/bin/diff-so-fancy
 # download git-mv-with-history
 curl -o ~/bin/git-mv-with-history "https://gist.githubusercontent.com/emiller/6769886/raw/git-mv-with-history"
 chmod 755 ~/bin/git-mv-with-history
+
+# See your latest local git branches, formatted real fancy
+# https://github.com/paulirish/git-recent
+curl -o ~/bin/git-recent "https://raw.githubusercontent.com/paulirish/git-recent/master/git-recent"
+chmod 755 ~/bin/git-recent
