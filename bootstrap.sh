@@ -53,3 +53,8 @@ chmod 755 ~/bin/git-mv-with-history
 # https://github.com/paulirish/git-recent
 curl -o ~/bin/git-recent "https://raw.githubusercontent.com/paulirish/git-recent/master/git-recent"
 chmod 755 ~/bin/git-recent
+
+# Type `git open` to open the GitHub page or website for a repository in your browser.
+# https://github.com/paulirish/git-open
+curl -o ~/bin/git-open "https://raw.githubusercontent.com/paulirish/git-open/master/git-open"
+chmod 755 ~/bin/git-open
