@@ -58,3 +58,8 @@ chmod 755 ~/bin/git-recent
 # https://github.com/paulirish/git-open
 curl -o ~/bin/git-open "https://raw.githubusercontent.com/paulirish/git-open/master/git-open"
 chmod 755 ~/bin/git-open
+
+# Recall what you did on the last working day. Psst! or be nosy and find what someone else in your team did ;-)
+# https://github.com/kamranahmedse/git-standup
+curl -o ~/bin/git-standup "https://raw.githubusercontent.com/kamranahmedse/git-standup/master/git-standup"
+chmod 755 ~/bin/git-standup
