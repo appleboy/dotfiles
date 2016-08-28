@@ -22,6 +22,16 @@ Install [spf13-vim](https://github.com/spf13/spf13-vim)
 $ sh <(curl https://j.mp/spf13-vim3 -L)
 ```
 
+## Tools
+
+* [x] [z.sh](https://github.com/rupa/z)
+* [x] [diff-so-fancy](https://github.com/stevemao/diff-so-fancy)
+* [x] [git-blame-someone-else](https://github.com/jayphelps/git-blame-someone-else)
+* [x] git-mv-with-history
+* [x] [git-recent](https://github.com/paulirish/git-recent)
+* [x] [git-open](https://github.com/paulirish/git-open)
+* [x] [git-standup](https://github.com/kamranahmedse/git-standup)
+
 ## Demo
 
 Download demo terminal from docker.
