@@ -36,6 +36,7 @@
   po = push origin
   pu = pull --rebase origin master
   sync = fetch --prune
+  patch = --no-pager diff --no-color
 
   unstage = reset HEAD
   uncommit = reset --soft HEAD^
