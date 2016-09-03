@@ -35,6 +35,7 @@
   fu = fetch upstream
   po = push origin
   pu = pull --rebase origin master
+  sync = fetch --prune
 
   unstage = reset HEAD
   uncommit = reset --soft HEAD^
