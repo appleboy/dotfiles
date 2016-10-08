@@ -10,6 +10,8 @@
   branch = auto
   log = auto
   ui = auto
+[pull]
+  rebase = true
 [branch]
   autosetuprebase = always
 [alias]
