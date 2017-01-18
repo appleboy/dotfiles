@@ -63,3 +63,8 @@ chmod 755 ~/bin/git-open
 # https://github.com/kamranahmedse/git-standup
 curl -o ~/bin/git-standup "https://raw.githubusercontent.com/kamranahmedse/git-standup/master/git-standup"
 chmod 755 ~/bin/git-standup
+
+# Git quick statistics is a simple and efficient way to access various statistics in git repository.
+# https://github.com/arzzen/git-quick-stats
+curl -o ~/bin/git-quick-stats "https://raw.githubusercontent.com/arzzen/git-quick-stats/master/git-quick-stats"
+chmod 755 ~/bin/git-quick-stats
