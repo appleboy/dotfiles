@@ -68,3 +68,8 @@ chmod 755 ~/bin/git-standup
 # https://github.com/arzzen/git-quick-stats
 curl -o ~/bin/git-quick-stats "https://raw.githubusercontent.com/arzzen/git-quick-stats/master/git-quick-stats"
 chmod 755 ~/bin/git-quick-stats
+
+# Simple and handy tool to easily recall what you've done
+# https://github.com/Fakerr/git-recall
+curl -o ~/bin/git-recall "https://raw.githubusercontent.com/Fakerr/git-recall/master/git-recall"
+chmod 755 ~/bin/git-recall
