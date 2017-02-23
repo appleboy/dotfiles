@@ -63,6 +63,9 @@
   # diff-so-fancy
   df = "!f() { [ -z "$GIT_PREFIX" ] || cd "$GIT_PREFIX" '' && git diff --color "$@" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
 
+  # Add list all git aliases
+  la = !git config -l | grep alias | sed s/^alias\\.//g
+
 [core]
   editor = vim
 # so much color
