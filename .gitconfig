@@ -52,13 +52,13 @@
   rs = rebase --skip
   ra = rebase --abort
 
-	# Show verbose output about tags, branches or remotes
-	tags = tag -l
-	branches = branch -a
-	remotes = remote -v
+  # Show verbose output about tags, branches or remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
 
-	# List contributors with number of commits
-	contributors = shortlog --summary --numbered
+  # List contributors with number of commits
+  contributors = shortlog --summary --numbered
 
   # diff-so-fancy
   df = "!f() { [ -z "$GIT_PREFIX" ] || cd "$GIT_PREFIX" '' && git diff --color "$@" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
