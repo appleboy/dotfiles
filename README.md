@@ -31,6 +31,9 @@ $ sh <(curl https://j.mp/spf13-vim3 -L)
 * [x] [git-recent](https://github.com/paulirish/git-recent)
 * [x] [git-open](https://github.com/paulirish/git-open)
 * [x] [git-standup](https://github.com/kamranahmedse/git-standup)
+* [x] [git-quick-stats](https://github.com/arzzen/git-quick-stats)
+* [x] [git-recall](https://github.com/Fakerr/git-recall)
+* [x] [wifi-password](https://github.com/rauchg/wifi-password) macOS only
 
 ## Demo
 
