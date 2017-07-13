@@ -38,10 +38,8 @@ chmod +x ~/bin/git-blame-someone-else
 
 # download diff-so-fancy (https://github.com/stevemao/diff-so-fancy)
 [ -d "~/bin/libexec" ] || mkdir -p ~/bin/libexec
-curl -o ~/bin/libexec/diff-so-fancy.pl "https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/libexec/diff-so-fancy.pl"
-curl -o ~/bin/diff-highlight "https://raw.githubusercontent.com/git/git/master/contrib/diff-highlight/diff-highlight"
-curl -o ~/bin/diff-so-fancy "https://raw.githubusercontent.com/stevemao/diff-so-fancy/master/diff-so-fancy"
-chmod +x ~/bin/libexec/diff-so-fancy.pl
+curl -o ~/bin/diff-highlight "https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/diff-highlight/diff-highlight"
+curl -o ~/bin/diff-so-fancy "https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/diff-so-fancy"
 chmod +x ~/bin/diff-highlight
 chmod +x ~/bin/diff-so-fancy
 
