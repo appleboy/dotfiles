@@ -36,11 +36,9 @@ chmod +x ~/z.sh
 curl -o ~/bin/git-blame-someone-else "https://raw.githubusercontent.com/jayphelps/git-blame-someone-else/master/git-blame-someone-else"
 chmod +x ~/bin/git-blame-someone-else
 
-# download diff-so-fancy (https://github.com/stevemao/diff-so-fancy)
+# download diff-so-fancy (https://github.com/so-fancy/diff-so-fancy)
 [ -d "~/bin/libexec" ] || mkdir -p ~/bin/libexec
-curl -o ~/bin/diff-highlight "https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/diff-highlight/diff-highlight"
 curl -o ~/bin/diff-so-fancy "https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/diff-so-fancy"
-chmod +x ~/bin/diff-highlight
 chmod +x ~/bin/diff-so-fancy
 
 # download git-mv-with-history
