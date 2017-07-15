@@ -61,6 +61,7 @@
 
 [core]
   editor = vim
+  pager = diff-so-fancy | less --tabs=4 -RFX
 # so much color
 [color]
   ui = always
