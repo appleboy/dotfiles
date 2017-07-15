@@ -3,13 +3,6 @@
   email = appleboy.tw@gmail.com
 [push]
   default = simple
-[color]
-  ui = true
-  diff = auto
-  status = auto
-  branch = auto
-  log = auto
-  ui = auto
 [pull]
   rebase = true
 [branch]
