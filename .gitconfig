@@ -3,6 +3,8 @@
   email = appleboy.tw@gmail.com
 [push]
   default = simple
+[core]
+  excludesfile = "~/.gitignore_global"
 [pull]
   rebase = true
 [branch]
