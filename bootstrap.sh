@@ -75,3 +75,7 @@ chmod +x ~/bin/git-recall
 # https://github.com/rauchg/wifi-password
 curl -L https://raw.github.com/rauchg/wifi-password/master/wifi-password.sh -o ~/bin/wifi-password
 chmod +x ~/bin/wifi-password
+
+# install tig command
+git clone  https://github.com/jonas/tig.git
+cd tig && make && make install
