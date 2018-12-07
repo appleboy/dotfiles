@@ -14,7 +14,7 @@ export EDITOR="vim"
 export GIT_PAGER="less"
 export LESS="-EfmrSwX"
 export LSCOLORS="dxfxcxdxbxegedabagacad"
-export PATH="/usr/local/sbin:/usr/sbin:/sbin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 
 # Add a timestamp to your bash history
 export HISTTIMEFORMAT="%d/%m/%y %T "
