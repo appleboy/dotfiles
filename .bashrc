@@ -5,6 +5,10 @@ export LC_ALL="en_US.UTF-8"
 export LC_CTYPE="UTF-8"
 export LANG="en_US.UTF-8"
 
+# save bash history
+# https://superuser.com/questions/950403/bash-history-not-preserved-between-terminal-sessions-on-mac/985099
+export SHELL_SESSION_HISTORY=0
+
 # set for mac
 export CLICOLOR=1
 
