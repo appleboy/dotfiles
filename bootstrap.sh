@@ -83,3 +83,7 @@ cd tig && make && make install
 # install Skaffold for macos
 curl -Lo ~/bin/skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-darwin-amd64
 chmod +x ~/bin/skaffold
+
+# install kubectl for macos
+curl -Lo ~/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
+chmod +x ~/bin/kubectl
