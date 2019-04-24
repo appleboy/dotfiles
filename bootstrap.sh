@@ -79,3 +79,7 @@ chmod +x ~/bin/wifi-password
 # install tig command
 git clone  https://github.com/jonas/tig.git
 cd tig && make && make install
+
+# install Skaffold for macos
+curl -Lo ~/bin/skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-darwin-amd64
+chmod +x ~/bin/skaffold
