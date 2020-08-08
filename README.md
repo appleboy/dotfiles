@@ -35,20 +35,39 @@ $ sh <(curl https://j.mp/spf13-vim3 -L)
 * [x] [git-recall](https://github.com/Fakerr/git-recall)
 * [x] [wifi-password](https://github.com/rauchg/wifi-password) macOS only
 
+## VSCode
+
+export
+
+```sh
+code --list-extensions >> vs_code_extensions_list.txt
+```
+
+install
+
+```sh
+cat vs_code_extensions_list.txt | xargs -n 1 code --install-extension
+```
+
+Config
+
+* Windows: `%USERPROFILE%\.vscode\extensions`
+* macOS/Linux: `~/.vscode/extensions`
+
 ## Demo
 
 Download demo terminal from docker.
 
-```
-$ docker pull appleboy/docker-terminal
+```sh
+docker pull appleboy/docker-terminal
 ```
 
 Login to docker terminal
 
-```
-$ docker run -ti appleboy/docker-terminal
+```sh
+docker run -ti appleboy/docker-terminal
 ```
 
-# Author
+## Author
 
 Bo-Yi Wu, Twitter: [@appleboy](http://twitter.com/appleboy "Twitter"), Blog: http://blog.wu-boy.com
