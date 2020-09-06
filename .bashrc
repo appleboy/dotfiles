@@ -24,6 +24,8 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
 # ref: http://unix.stackexchange.com/questions/1288/preserve-bash-history-in-multiple-terminal-windows
+# https://apple.stackexchange.com/questions/218731/why-bash-history-on-my-mac-wont-save
+export SHELL_SESSION_HISTORY=0
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
