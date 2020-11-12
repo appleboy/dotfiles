@@ -32,6 +32,7 @@
   fu = fetch upstream
   po = push origin
   pu = pull --rebase origin master
+  pm = pull --rebase origin main
   sync = fetch --prune
   patch = --no-pager diff --no-color
 
