@@ -32,6 +32,10 @@ unset doIt;
 curl -L "https://raw.githubusercontent.com/rupa/z/master/z.sh" -o ~/z.sh
 chmod +x ~/z.sh
 
+[ -f "${HOME}/.git-completion.sh" ] && rm -rf ${HOME}/.git-completion.sh
+curl -L "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" -o ~/.git-completion.sh
+chmod +x ~/.git-completion.sh
+
 # download git-blame-someone-else (https://github.com/jayphelps/git-blame-someone-else)
 curl -o ~/bin/git-blame-someone-else "https://raw.githubusercontent.com/jayphelps/git-blame-someone-else/master/git-blame-someone-else"
 chmod +x ~/bin/git-blame-someone-else
