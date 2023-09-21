@@ -161,3 +161,6 @@ alias nit='npm install && npm test'
 alias nk='npm link'
 alias nr='npm run'
 alias nf='npm cache clean && rm -rf node_modules && npm install'
+
+# https://github.com/sharkdp/bat
+alias cat='bat --theme 1337'
