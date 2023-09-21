@@ -41,6 +41,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 [ -f "/usr/local/etc/bash_completion" ] && source "/usr/local/etc/bash_completion"
 [ -f "${HOME}/.git-completion.bash" ] && source "${HOME}/.git-completion.bash"
 [ -f "/usr/local/share/git-core/contrib/completion/git-completion.bash" ] && source "/usr/local/share/git-core/contrib/completion/git-completion.bash"
+[ -f "/opt/homebrew/etc/profile.d/bash_completion.sh" ] && source "/opt/homebrew/etc/profile.d/bash_completion.sh"
 
 function git_branch {
     ref=$(git symbolic-ref HEAD 2> /dev/null) || return;
