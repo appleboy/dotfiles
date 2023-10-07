@@ -1,6 +1,7 @@
 [user]
   name = Bo-Yi Wu
   email = appleboy.tw@gmail.com
+  signingkey = "~/.ssh/id_rsa.pub"
 [push]
   default = simple
 [core]
@@ -88,3 +89,7 @@
   added = yellow
   changed = green
   untracked = cyan
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
