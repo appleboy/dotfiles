@@ -13,13 +13,13 @@ Screenshot for tmux
 ## Usage
 
 ```
-$ git clone https://github.com/appleboy/dotfiles.git && cd dotfiles && source bootstrap.sh
+git clone https://github.com/appleboy/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 Install [spf13-vim](https://github.com/spf13/spf13-vim)
 
 ```
-$ sh <(curl https://j.mp/spf13-vim3 -L)
+sh <(curl https://j.mp/spf13-vim3 -L)
 ```
 
 ## Tools
