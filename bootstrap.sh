@@ -91,3 +91,7 @@ chmod +x ~/bin/skaffold
 # install kubectl for macos
 curl -Lo ~/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/darwin/amd64/kubectl
 chmod +x ~/bin/kubectl
+
+# Why is this running? Find out what a process is doing on your system.
+# https://github.com/pranshuparmar/witr
+curl -fsSL https://raw.githubusercontent.com/pranshuparmar/witr/main/install.sh | bash
